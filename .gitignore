@@ -1,7 +1,6 @@
-
 # Ignore Visual Studio build directories
 /bin/
-/obj/
+obj/
 
 # Ignore Visual Studio user-specific files
 *.rsuser
@@ -20,7 +19,6 @@
 
 # Ignore Visual Studio generated files
 .vs/
-
 
 # Ignore all files and folders inside the obj/Debug/net8.0 directory
 **/obj/Debug/net8.0/
