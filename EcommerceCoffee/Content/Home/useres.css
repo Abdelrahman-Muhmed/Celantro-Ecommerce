@@ -1,0 +1,224 @@
+﻿/* Importing Google Fonts for enhanced typography */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+/* CSS Variables for easy theming */
+:root {
+    --primary-color: #007bff;
+    --danger-color: #dc3545;
+    --success-color: #28a745;
+    --secondary-color: #6c757d;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --text-color: #212529;
+    --background-color: #f4f4f4;
+    --table-header-bg: #343a40;
+    --table-header-text: #ffffff;
+    --table-row-hover: #f1f1f1;
+    --border-color: #dee2e6;
+    --font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.content {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    font-size: 28px;
+    color: var(--dark-color);
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+p {
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 16px;
+    margin: 5px 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+    .btn i {
+        margin-right: 6px;
+    }
+
+    .btn:hover {
+        background-color: darken(var(--primary-color), 10%);
+        transform: translateY(-2px);
+    }
+
+    .btn:active {
+        transform: translateY(0);
+    }
+
+    .btn.primary {
+        background-color: var(--success-color);
+    }
+
+        .btn.primary:hover {
+            background-color: darken(var(--success-color), 10%);
+        }
+
+    .btn.danger {
+        background-color: var(--danger-color);
+    }
+
+        .btn.danger:hover {
+            background-color: darken(var(--danger-color), 10%);
+        }
+
+.table-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    overflow-x: auto;
+}
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    .user-table thead {
+        background-color: var(--table-header-bg);
+        color: var(--table-header-text);
+    }
+
+    .user-table th,
+    .user-table td {
+        padding: 16px 20px;
+        text-align: left;
+        border-bottom: 1px solid var(--border-color);
+        vertical-align: middle;
+    }
+
+    .user-table th {
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .user-table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    .user-table tbody tr:hover {
+        background-color: var(--table-row-hover);
+    }
+
+    .user-table tbody td {
+        font-size: 14px;
+        color: var(--text-color);
+    }
+
+/* Action Buttons within Table */
+.action-btn {
+    margin-right: 5px;
+    padding: 6px 10px;
+    font-size: 13px;
+    border-radius: 4px;
+}
+
+    .action-btn.update {
+        background-color: var(--primary-color);
+    }
+
+        .action-btn.update:hover {
+            background-color: darken(var(--primary-color), 10%);
+        }
+
+    .action-btn.details {
+        background-color: var(--secondary-color);
+    }
+
+        .action-btn.details:hover {
+            background-color: darken(var(--secondary-color), 10%);
+        }
+
+    .action-btn.delete {
+        background-color: var(--danger-color);
+    }
+
+        .action-btn.delete:hover {
+            background-color: darken(var(--danger-color), 10%);
+        }
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .content,
+    .table-container {
+        padding: 15px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .user-table th,
+    .user-table td {
+        padding: 12px 15px;
+    }
+
+    .btn,
+    .action-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 576px) {
+    .user-table th,
+    .user-table td {
+        padding: 10px 12px;
+    }
+
+    .btn,
+    .action-btn {
+        font-size: 11px;
+        padding: 6px 10px;
+    }
+
+    .section-title {
+        font-size: 20px;
+    }
+}
+
+/* Utility Classes */
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+

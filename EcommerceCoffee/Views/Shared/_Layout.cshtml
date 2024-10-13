@@ -1,0 +1,131 @@
+﻿
+@{
+    bool isLoggedIn = Session["UserName"] != null;
+}
+
+
+@*@using EcommerceCoffe_BLL.Helpers*@
+@*lang="@CultureHelper.CurrentCulture" dir="@(CultureHelper.CurrentCulture == "ar" ? "rtl" : "ltr")"*@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title </title>
+
+
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <link href="~/Content/Home/Products.css" rel="stylesheet" />
+    <link href="~/Content/Home/form.css" rel="stylesheet" />
+    <link href="~/Content/Home/footer.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Home/Order.css" rel="stylesheet" />
+    <link href="~/WebFonts/fontawesome-free-6.4.0-web/css/all.min.css" rel="stylesheet" />
+    <link href="~/Content/Home/nav.css" rel="stylesheet" />
+    @*@Styles.Render("~/Content/css")*@
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+  
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center" href="@Url.Action("Index", "Product")">
+                    <span class="fw-bold">Celantro</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            @Html.ActionLink("Home", "Index", "Product", null, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Category", "Index", "Category", null, new { @class = "nav-link" })
+                        </li>
+                        <li class="nav-item">
+                            @Html.ActionLink("Users", "Index", "Account", null, new { @class = "nav-link" })
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto">
+                        @Html.ActionLink(" ", "Index", "Basket", null, new { @class = "fa-solid fa-cart-shopping cart-icon nav-item" })
+                        <li class="nav-item">@Html.ActionLink("English", "SetLanguage", "Language", new { culture = "en-US" }, new { @class = "nav-link" })</li>
+                        <li class="nav-item">@Html.ActionLink("Arabic", "SetLanguage", "Language", new { culture = "ar-SA" }, new { @class = "nav-link" })</li>
+                        @if (Session["UserName"] != null)
+                        {
+                            <li class="nav-item">
+                                @using (Html.BeginForm("Logout", "Account", FormMethod.Post, new { id = "logoutForm" }))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <a href="javascript:document.getElementById('logoutForm').submit();" class="nav-link">Logout</a>
+                                }
+                            </li>
+                            <li class="nav-item">
+                                <span class="nav-link">Welcome, @Session["UserName"]!</span>
+                            </li>
+                        }
+                        else
+                        {
+                            <li class="nav-item">
+                                @Html.ActionLink("Join Us", "Register", "Account", null, new { @class = "nav-link" })
+                            </li>
+                            <li class="nav-item">
+                                @Html.ActionLink("Login", "Login", "Account", null, new { @class = "nav-link" })
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <div class="m-5">
+            @RenderBody()
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <h5>CONTACT US</h5>
+                        <p><i class="fab fa-facebook-f"></i> <a href="http://www.example.com">www.example.com</a></p>
+                        <p><i class="fab fa-twitter"></i> <a href="mailto:info@example.com">info@example.com</a></p>
+                        <p><i class="fab fa-instagram"></i> 123 6th St. Melbourne, FL 32904</p>
+                        <p><i class="fab fa-youtube"></i> YouTube</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <h5>ABOUT US</h5>
+                        <p>Since 1987, our institution has been guiding students and people around the world. We provide astonishing facilities and help others in every community and region.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <h5>BUSINESS HOURS</h5>
+                        <p>Monday-Friday: 9am to 5pm</p>
+                        <p>Saturday: 10am to 2pm</p>
+                        <p>Sunday: Closed</p>
+                    </div>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <p>&copy; Copyright 2024 By Developer Team</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+ 
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/GlobalVal")
+    @*<script src="~/Scripts/Front/front.js"></script>*@
+    @*@Scripts.Render("~/bundles/ajax")*@
+
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

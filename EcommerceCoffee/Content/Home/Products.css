@@ -1,0 +1,155 @@
+﻿/* Colors */
+:root {
+    --color-primary-white: rgb(240, 240, 240);
+}
+
+/* Start Content */
+.content {
+    text-align: center;
+    margin-top: 50px;
+    position: relative;
+}
+
+    .content h3 {
+        position: relative;
+        display: inline-block;
+        padding-bottom: 10px;
+    }
+
+        .content h3::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 2px;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            background-color: #ff9822;
+        }
+
+    .content p {
+        margin-top: 20px;
+        font-size: 1rem;
+    }
+
+/* Card Styles */
+.card-content h2,
+.card-content p,
+.card-content a {
+    color: black;
+}
+
+#product-container {
+    /* Relying on Bootstrap's grid system */
+}
+
+.card {
+    text-align: center;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5DC;
+    border: none;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+    .card img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 10px;
+        margin: 15px auto 10px;
+    }
+
+.carousel-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* Carousel Styles */
+.carousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%; 
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+    min-width: 100%; 
+    box-sizing: border-box;
+}
+
+    /* Adjust carousel image height for smaller screens */
+    @media only screen and (max-width: 767px) {
+        .carousel-image {
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .carousel-image {
+        height: 150px;
+    }
+}
+
+/* Button Styling */
+.button {
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #ff9822;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 5px 15px;
+    border: 2px solid #ff9822;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin: 5px;
+    text-decoration: none;
+}
+
+    .button:hover {
+        background-color: #ff9822;
+        color: white;
+    }
+
+/* Adjust Carousel Arrows */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+    .carousel-button.left {
+        left: 10px;
+    }
+
+    .carousel-button.right {
+        right: 10px;
+    }
+
+    .carousel-button:before {
+        color: #ff9822;
+    }
+
+/* Adjust Slick Carousel Arrows if needed */
+.slick-prev:before,
+.slick-next:before {
+    color: #ff9822;
+}

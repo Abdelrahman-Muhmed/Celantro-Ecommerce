@@ -1,0 +1,42 @@
+﻿@model EcommerceCoffe_DAL.Models.BasketModel.CustomerBasket
+
+@{
+    ViewBag.Title = "GetBasketById";
+}
+
+<h2>GetBasketById</h2>
+
+<div>
+    <h4>CustomerBasket</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ClientSecret)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClientSecret)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DeliveryMethodId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DeliveryMethodId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.shippingPriceBasket)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.shippingPriceBasket)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

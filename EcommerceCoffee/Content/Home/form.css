@@ -1,0 +1,108 @@
+﻿:root {
+    --color-primary-white: rgb(240, 240, 240);
+    --primary-accent-color: #ff9822;
+    --form-bg-color: #f9f9f9;
+}
+
+/* Form Container */
+.form-horizontal {
+    background-color: var(--form-bg-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+    .form-horizontal h4 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: var(--primary-accent-color);
+        font-weight: bold;
+        position: relative;
+    }
+
+        .form-horizontal h4::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary-accent-color);
+        }
+
+    /* Form Labels */
+    .form-horizontal .control-label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    /* Form Inputs */
+    .form-horizontal .form-control {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 1rem;
+        transition: border-color 0.3s;
+    }
+
+        .form-horizontal .form-control:focus {
+            border-color: var(--primary-accent-color);
+        }
+
+/* Validation Messages */
+.text-danger {
+    color: #e74c3c;
+    font-size: 0.9rem;
+}
+
+/* Submit Button */
+.btn-default {
+    background-color: var(--primary-accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-default:hover {
+        background-color: #ff8000;
+    }
+
+
+.button {
+    border: none;
+    outline: none;
+    background: #fff;
+    color: #ff9822;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 5px 15px;
+    border: 2px solid #ff9822;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin: 5px;
+    text-decoration: none;
+}
+
+    .button:hover {
+        background-color: #ff9822;
+        color: white;
+    }
+
+/* Responsive Design */
+@media only screen and (max-width: 767px) {
+    .form-horizontal {
+        padding: 10px;
+    }
+
+        .form-horizontal h4 {
+            font-size: 1.2rem;
+        }
+}

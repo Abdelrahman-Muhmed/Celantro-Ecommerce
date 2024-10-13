@@ -1,0 +1,21 @@
+﻿<!-- Views/Shared/_AuthLayout.cshtml -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - Your Application</title>
+ 
+    <link href="~/Content/Home/form.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr") <!-- Adjust paths as necessary -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+    <div class="auth-container">
+        @RenderBody()
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
