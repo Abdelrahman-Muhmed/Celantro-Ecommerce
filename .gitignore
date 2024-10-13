@@ -30,3 +30,4 @@
 
 # Ignore specific file types
 *.xml
+*.dll.config  # <-- Add this line to ignore all .dll.config files
