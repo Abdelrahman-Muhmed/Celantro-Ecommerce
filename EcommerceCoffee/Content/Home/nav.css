@@ -1,0 +1,31 @@
+﻿/* Custom Styles for Navbar */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .nav-link {
+    font-size: 1.1rem;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+    .navbar .nav-link:hover {
+        color: #f8f9fa !important;
+        background-color: #495057;
+        border-radius: 5px;
+    }
+
+.navbar-toggler {
+    border: none;
+}
+
+    .navbar-toggler:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+/* Language Dropdown */
+.dropdown-menu {
+    min-width: 8rem;
+}

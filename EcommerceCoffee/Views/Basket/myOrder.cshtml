@@ -1,0 +1,49 @@
+﻿@model EcommerceCoffe_DAL.Models.OrderModel.Order
+
+<h3>Total Amount: <span id="totalAmount">@Model.TotalAmount.ToString("C")</span></h3>
+<h4>Order Date: @Model.OrderDate.ToString("MM/dd/yyyy")</h4>
+
+<div>
+    <label for="discount">Discount (%):</label>
+    <input type="number" id="discount" value="0" min="0" max="100" />
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Image</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Total</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody id="order-items">
+        @foreach (var item in Model.OrderItems)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.ProductName)</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.PictureUrl))
+                    {
+                        <img src="@Url.Content(item.PictureUrl)" alt="Product Image" class="img-thumbnail" style="width: 50px; height: 50px;" />
+                    }
+                    else
+                    {
+                        <p>No image available.</p>
+                    }
+                </td>
+                <td class="item-price">@((item.Price).ToString("C"))</td>
+                <td>
+                    <button class="decrement" data-id="@item.ProductName">-</button>
+                    <input type="number" class="item-quantity" value="@item.Quantity" data-product-id="@item.ProductName" min="1" />
+                    <button class="increment" data-id="@item.ProductName">+</button>
+                </td>
+                <td class="item-total">@((item.Price * item.Quantity).ToString("C"))</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<button id="createOrder" class="btn btn-primary">Create Order</button>

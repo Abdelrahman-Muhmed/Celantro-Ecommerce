@@ -1,0 +1,67 @@
+﻿@model EcommerceCoffee_BLL.DTOs.RegisterDto
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_AuthLayout.cshtml";
+
+}
+
+<div class="container">
+    @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "mt-5 form-horizontal" }))
+    {
+        @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <h4>Register</h4>
+        <hr />
+
+        @* Name *@
+        <div class="form-group row">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        @* Name *@
+        <div class="form-group row">
+            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Email, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @* Price *@
+        <div class="form-group row">
+            @Html.LabelFor(model => model.phoneNumber, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.phoneNumber, new { @class = "form-control", type = "number", min = 0, step = "0.01" })
+                @Html.ValidationMessageFor(model => model.phoneNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        @* PassWord *@
+        <div class="form-group row">
+            @Html.LabelFor(model => model.Password, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Password, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        @* PassWord confirmed *@
+        <div class="form-group row">
+            @Html.LabelFor(model => model.confirmPassWord, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.confirmPassWord, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.confirmPassWord, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @* Submit Button *@
+        <div class="form-group row">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Register" class="button" />
+            </div>
+        </div>
+    </div>
+    }
+
+</div>

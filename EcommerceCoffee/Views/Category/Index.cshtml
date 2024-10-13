@@ -1,0 +1,39 @@
+﻿@model IEnumerable<EcommerceCoffe_DAL.Models.Product.ProductCategory>
+
+@{
+    ViewBag.Title = "Categories";
+}
+
+<!-- Custom CSS -->
+<link href="~/Content/Home/Products.css" rel="stylesheet" />
+<div class="">
+    <!-- Page Header -->
+    <div class="content mb-4">
+        <a href="@Url.Action("Create", "Category")" class="btn button">New Category</a>
+        <h3 class="mt-3">Category</h3>
+        <p>Explore our various categories to find the products that best suit your needs.</p>
+    </div>
+
+    <!-- Category Grid -->
+    <div id="product-container" class="row justify-content-center">
+        @foreach (var item in Model)
+        {
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="card h-100" data-name="@item.Name">
+                    <img src="@Url.Content("~/Images/" + item.PictureUrl)" alt="Image of @item.Name" class="card-img-top mx-auto d-block" />
+
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">@item.Name</h5>
+                        <p class="card-text">@item.Description</p>
+                    </div>
+
+                    <div class="card-footer d-flex justify-content-center flex-wrap">
+                        <a href="@Url.Action("Update", "Category", new { id = item.id })" class="btn button m-1">Update</a>
+                        <a href="@Url.Action("Details", "Category", new { id = item.id })" class="btn button m-1">Details</a>
+                        <a data-id="@item.id" data-controller="Category" data-method="GET" class="btn button deleteBtn m-1">Delete</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

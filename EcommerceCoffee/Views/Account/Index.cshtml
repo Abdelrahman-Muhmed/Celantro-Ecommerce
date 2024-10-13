@@ -1,0 +1,53 @@
+﻿@model IEnumerable<EcommerceCoffee_BLL.DTOs.ApplicationUserReturnDto>
+
+@{
+    ViewBag.Title = "Users";
+}
+<link href="~/Content/Home/useres.css" rel="stylesheet" />
+
+<div class="content" id="user-list">
+    <a href="@Url.Action("Create", "Account")" class="btn primary"><i class="fas fa-user-plus"></i> New User</a>
+    <h3 class="section-title">Users</h3>
+    <p>Explore the user list below.</p>
+</div>
+
+<div class="table-container">
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Email Confirmed</th>
+                <th>Phone Number</th>
+                <th>Is Logged In</th>
+                <th>Username</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td>@item.Email</td>
+                    <td>@(item.EmailConfirmed ? "Yes" : "No")</td>
+                    <td>@item.PhoneNumber</td>
+                    <td>@(item.IsLoggedIn ? "Yes" : "No")</td>
+                    <td>@item.UserName</td>
+                    <td>@item.LockoutEndDateUtc</td>
+
+                    <td>
+                        <a href="@Url.Action("Update", "Account", new { id = item.Id })" class="btn action-btn update"><i class="fas fa-edit"></i> Update</a>
+                        @*<a href="@Url.Action("Delete", "Account", new { id = item.Id })" class="btn action-btn delete"><i class="fas fa-trash-alt"></i> Delete</a>*@
+
+                        <a data-id="@item.Id" data-controller="Account" data-method="GET" class="deleteBtn btn action-btn delete"><i class="fas fa-trash-alt"></i>Delete</a>
+
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

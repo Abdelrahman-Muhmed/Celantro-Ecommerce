@@ -1,0 +1,66 @@
+﻿@model EcommerceCoffe_DAL.Models.OrderModel.Order
+
+@{
+    ViewBag.Title = "GetAllOrders";
+}
+
+<h2>GetAllOrders</h2>
+
+<div>
+    <h4>Order</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.deliveryMethod.shortName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.deliveryMethod.shortName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ByerEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ByerEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.orderStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.orderStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.shippingAdress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.shippingAdress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.subTotal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.subTotal)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

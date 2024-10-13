@@ -1,0 +1,55 @@
+﻿@model EcommerceCoffe_DAL.Models.Product.ProductCategory
+
+@{
+    ViewBag.Title = "Update";
+}
+
+<div class="container">
+    @*new { enctype = "multipart/form-data", @class = "form-horizontal" }*@
+    @using (Html.BeginForm("Update", "Category", FormMethod.Post, new { @class = "mt-5 form-horizontal" }))
+    {
+        @Html.AntiForgeryToken()
+    <div class="form-horizontal">
+        <h4>Update Category</h4>
+        <hr />
+
+        @* Name *@
+        <div class="form-group row">
+            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @* Description *@
+        <div class="form-group row">
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = 5 })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        @* Image Upload *@
+    <div class="form-group row">
+        @Html.LabelFor(model => model.PictureUrl, "Category Image", htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+        <div class="col-md-10">
+            <input type="file" name="PictureUrl" accept="image/*" class="form-control-file" />
+            <img src="@Url.Content("~/Images/"+ Model.PictureUrl)" alt="" class="card-img-top mx-auto d-block w-100" />
+
+            @Html.ValidationMessageFor(model => model.PictureUrl, "", new { @class = "text-danger" })
+        </div>
+    </div>
+       
+        @* Submit Button *@
+        <div class="form-group row">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="button" />
+            </div>
+        </div>
+    </div>
+    }
+
+    @Html.ActionLink("Back to Home", "Index", null, new { @class = "btn btn-secondary mx-2" })
+
+</div>
