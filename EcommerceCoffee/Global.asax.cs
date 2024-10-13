@@ -15,6 +15,8 @@ using Owin;
 using System;
 using AutoMapper;
 using EcommerceCoffee_BLL.Helpers.Mapping;
+using System.Web.Security;
+using Microsoft.AspNetCore.Identity;
 
 namespace EcommerceCoffee
 {
@@ -27,20 +29,22 @@ namespace EcommerceCoffee
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-           
+
 
             //// Register Unity
             UnityConfig.RegisterComponents();
+
+
         }
-
-
+       
         //Handle Automatic LogOut 
         protected void Session_End(object sender, EventArgs e)
         {
             var userId = Session["UserId"] as string;
             if (!string.IsNullOrEmpty(userId))
             {
-                var userManager = DependencyResolver.Current.GetService<UserManager<ApplicationUser>>();
+               var userManager = DependencyResolver.Current.GetService<Microsoft.AspNet.Identity.UserManager<ApplicationUser>>();
+
                 var user = userManager.FindById(userId);
                 if (user != null && user.CurrentSessionId == Session.SessionID)
                 {

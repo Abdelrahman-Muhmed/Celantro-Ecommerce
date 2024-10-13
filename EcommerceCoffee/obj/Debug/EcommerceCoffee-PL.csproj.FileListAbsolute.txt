@@ -195,8 +195,6 @@ C:\Users\Bodi\OneDrive\Desktop\EcommerceCoffee\EcommerceCoffee\bin\Microsoft.Bcl
 C:\Users\Bodi\OneDrive\Desktop\EcommerceCoffee\EcommerceCoffee\bin\Microsoft.IdentityModel.JsonWebTokens.xml
 C:\Users\Bodi\OneDrive\Desktop\EcommerceCoffee\EcommerceCoffee\bin\System.ValueTuple.xml
 C:\Users\Bodi\OneDrive\Desktop\EcommerceCoffee\EcommerceCoffee\obj\Debug\EcommerceCoffee-PL.csproj.AssemblyReference.cache
-C:\Users\Bodi\OneDrive\Desktop\EcommerceCoffee\EcommerceCoffee\obj\Debug\EcommerceCoffee.App_GlobalResources.Label.resources
-C:\Users\Bodi\OneDrive\Desktop\EcommerceCoffee\EcommerceCoffee\obj\Debug\EcommerceCoffee.App_GlobalResources.Label.ar-SA.resources
 C:\Users\Bodi\OneDrive\Desktop\EcommerceCoffee\EcommerceCoffee\obj\Debug\EcommerceCoffee-PL.csproj.GenerateResource.cache
 C:\Users\Bodi\OneDrive\Desktop\EcommerceCoffee\EcommerceCoffee\obj\Debug\EcommerceCoffee-PL.csproj.CoreCompileInputs.cache
 C:\Users\Bodi\OneDrive\Desktop\EcommerceCoffee\EcommerceCoffee\obj\Debug\ar-SA\EcommerceCoffee-PL.resources.dll
@@ -408,3 +406,5 @@ E:\EcommerceCoffee\EcommerceCoffee\obj\Debug\ar-SA\EcommerceCoffee-PL.resources.
 E:\EcommerceCoffee\EcommerceCoffee\obj\Debug\Ecommerc.734E28F5.Up2Date
 E:\EcommerceCoffee\EcommerceCoffee\obj\Debug\EcommerceCoffee-PL.dll
 E:\EcommerceCoffee\EcommerceCoffee\obj\Debug\EcommerceCoffee-PL.pdb
+C:\Users\Bodi\OneDrive\Desktop\EcommerceCoffee\EcommerceCoffee\obj\Debug\EcommerceCoffee.App_GlobalResources.English.resources
+C:\Users\Bodi\OneDrive\Desktop\EcommerceCoffee\EcommerceCoffee\obj\Debug\EcommerceCoffee.App_GlobalResources.Arabic.ar-SA.resources

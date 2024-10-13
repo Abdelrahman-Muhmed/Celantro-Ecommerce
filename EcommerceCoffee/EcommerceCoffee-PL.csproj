@@ -316,15 +316,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="App_GlobalResources\Label.ar-SA.Designer.cs">
+    <Compile Include="App_GlobalResources\Arabic.ar-SA.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Label.ar-SA.resx</DependentUpon>
+      <DependentUpon>Arabic.ar-SA.resx</DependentUpon>
     </Compile>
-    <Compile Include="App_GlobalResources\Label.Designer.cs">
+    <Compile Include="App_GlobalResources\English.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Label.resx</DependentUpon>
+      <DependentUpon>English.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -2589,13 +2589,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="App_GlobalResources\Label.ar-SA.resx">
+    <EmbeddedResource Include="App_GlobalResources\Arabic.ar-SA.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Label.ar-SA.Designer.cs</LastGenOutput>
+      <LastGenOutput>Arabic.ar-SA.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="App_GlobalResources\Label.resx">
+    <EmbeddedResource Include="App_GlobalResources\English.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Label.Designer.cs</LastGenOutput>
+      <LastGenOutput>English.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

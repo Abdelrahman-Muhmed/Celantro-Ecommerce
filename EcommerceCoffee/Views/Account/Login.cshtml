@@ -40,9 +40,14 @@
             <input type="submit" value="Login" class="button" id="loginBtn" />
             <a href="@Url.Action("Register", "Account")" class="btn button m-1">Join Us</a>
         </div>
-       
-      
     </div>
+        <div>
+            
+            <label>
+                <input type="checkbox" id="checkId" name="rememberMe"/>
+                Remeber Me 
+            </label>
+        </div>
        
         <div id="message" class="text-danger mt-2 text-center"></div>
     </div>
@@ -57,6 +62,11 @@
 
                         var email = $("#emailId").val();
                         var passWord = $("#passWordId").val();
+                        var check = $("#checkId").is(":checked"); 
+
+
+                       
+
                         var secretKey = "b14ca5898a4e4133bbce2ea2315a1916";
                         var encryptedPassword;
 
@@ -74,16 +84,19 @@
                             success: function (response) {
                                 encryptedPassword = response.encryptedString;
                                 console.log(encryptedPassword);
+                                console.log(passWord);
+                                console.log(check);
 
 
                                 $.ajax({
                                     type: "POST",
                                     url: "/Account/Login",
-                                    data: { Email: email, passWord: encryptedPassword },
+                                    data: { Email: email, passWord: encryptedPassword, remeberMe:check}, 
                                     success: function (response) {
-                                        console.log(response);
+                                        //console.log(response);
+                                        console.log("Error")
 
-                                        window.location.href = '/Product/Index';
+                                        window.location.href = '/Category/Index';
                                         // Store the token in sessionStorage
                                         sessionStorage.setItem('authToken', response.token);
                                     },

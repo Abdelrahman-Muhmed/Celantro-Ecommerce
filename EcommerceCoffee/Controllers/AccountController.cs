@@ -57,13 +57,13 @@ namespace EcommerceCoffee.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> Login(loginDto loginDto)
+        public async Task<ActionResult> Login(loginDto loginDto, bool remeberMe)
         {
             // Decrypt the encrypted password from the request
             var secretKey = "b14ca5898a4e4133bbce2ea2315a1916";
             string decryptedPassword;
 
-            decryptedPassword = EncryptionHelper.DecryptString(secretKey,loginDto.PassWord);
+            decryptedPassword = EncryptionHelper.DecryptString(secretKey, loginDto.PassWord);
 
             if (!ModelState.IsValid)
             {
@@ -76,15 +76,7 @@ namespace EcommerceCoffee.Controllers
                 return new HttpStatusCodeResult(401, "Unauthorized");
             }
 
-
-            //if (user.IsLoggedIn)
-            //{
-               
-            //    return new HttpStatusCodeResult(403, "User already logged in from another device.");
-
-            //}
-
-            var result = await _signInManager.PasswordSignInAsync(user.UserName, decryptedPassword, isPersistent: false, shouldLockout: false);
+            var result = await _signInManager.PasswordSignInAsync(user.UserName, decryptedPassword, isPersistent: remeberMe, shouldLockout: false);
 
             if (result != SignInStatus.Success)
             {
@@ -110,8 +102,15 @@ namespace EcommerceCoffee.Controllers
             var token = await _authServ.CreateTokenAsync(user, _userManager);
             Session["AuthToken"] = token;
 
-            // Sign in the user with additional parameter for rememberBrowser
-            await _signInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+            if (user.IsLoggedIn)
+            {
+                //return new HttpStatusCodeResult(403, "User already logged in from another device.");
+                return RedirectToAction("Index", "Category");
+
+            }
+
+            //// Sign in the user with additional parameter for rememberBrowser
+            //await _signInManager.SignInAsync(user, isPersistent: false, rememberBrowser: true);
 
             var userDto = new UserDto
             {
@@ -121,6 +120,7 @@ namespace EcommerceCoffee.Controllers
                 Token = token
             };
 
+            await _userManager.UpdateAsync(user);
 
             return Json(userDto);
 
@@ -128,6 +128,9 @@ namespace EcommerceCoffee.Controllers
             //return Json(new { success = false, message = "Invalid email or password." });
 
         }
+
+  
+
         public ActionResult Logout()
         {
             var userId = Session["UserId"] as string;
