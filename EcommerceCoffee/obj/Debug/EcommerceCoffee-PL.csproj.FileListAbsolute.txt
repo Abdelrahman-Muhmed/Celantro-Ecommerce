@@ -406,5 +406,5 @@ E:\EcommerceCoffee\EcommerceCoffee\obj\Debug\ar-SA\EcommerceCoffee-PL.resources.
 E:\EcommerceCoffee\EcommerceCoffee\obj\Debug\Ecommerc.734E28F5.Up2Date
 E:\EcommerceCoffee\EcommerceCoffee\obj\Debug\EcommerceCoffee-PL.dll
 E:\EcommerceCoffee\EcommerceCoffee\obj\Debug\EcommerceCoffee-PL.pdb
-C:\Users\Bodi\OneDrive\Desktop\EcommerceCoffee\EcommerceCoffee\obj\Debug\EcommerceCoffee.App_GlobalResources.English.resources
-C:\Users\Bodi\OneDrive\Desktop\EcommerceCoffee\EcommerceCoffee\obj\Debug\EcommerceCoffee.App_GlobalResources.Arabic.ar-SA.resources
+C:\Users\Bodi\OneDrive\Desktop\EcommerceCoffee\EcommerceCoffee\obj\Debug\EcommerceCoffee.App_GlobalResources.Resources.resources
+C:\Users\Bodi\OneDrive\Desktop\EcommerceCoffee\EcommerceCoffee\obj\Debug\EcommerceCoffee.App_GlobalResources.Resources.ar-SA.resources

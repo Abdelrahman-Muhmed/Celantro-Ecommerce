@@ -1,8 +1,5 @@
 ﻿
 
-
-
-
 //start Call Delete End Point
 $(document).ready(function () {
     $(".deleteBtn").click(function () {
@@ -85,7 +82,6 @@ $(document).ready(function () {
         filter(query);
     });
 })
-
 //End Searching
 
 
@@ -262,16 +258,6 @@ $(document).ready(function () {
 //End Handle Order
 
 
-
-
-
-
-
-
-
-
-
-
 //Start Alert When Activity Time End
 
 //$(document).ready(function () {
@@ -339,6 +325,161 @@ $(document).ready(function () {
 //})
 
 //End Alert When Acticity Time End
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>Translate <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+//Start Handle Langugae
+
+//$(document).ready(function () {
+//    var keys = [
+//        "NewProduct", "Products", "ExploreCategories", "SearchPlaceholder",
+//        "Price", "Update", "Details", "Delete", "AddToCart"
+//    ];
+
+//    function translateContent() {
+//        $(['data-translate']).each(function () {
+//            var key = $(this).data('translate');
+//            $(this).text(translations[key]);
+//        });
+
+//        $(['data-SearchPlaceholder']).each(function () {
+//            var key = $(this).data('SearchPlaceholder');
+//            $(this).attr('placeholder', translations[key]);
+//        })
+
+//        $(['data-name']).each(function () {
+//            var key = $(this).data('name');
+//            $(this).text(translations[key]);
+
+//        })
+
+//        $(['data-description']).each(function () {
+//            var key = $(this).data('description');
+//            $(this).text(translations[key]);
+
+//        })
+
+
+//    }
+//    $('.Lang-btn').click(function (e) {
+//        e.preventDefult();
+//        var culture = $(this).data('culture');
+
+
+
+//       $.ajax({
+//            type: 'POST',
+//            url: '/Language/SetLanguageAndTranslate',
+//           data: {
+//               culture: culture,
+//                   keys: keys.concat($('[data-name]').map(function () { return $(this).data('name'); }).get())
+//                   .concat($('[data-description]').map(function () { return $(this).data('description'); }).get())
+
+//           }, success: function (response) {
+//               if (response.success) {
+//                   translations = response.translations;
+//                   translateContent();
+//               }
+//           },
+//           error: function () {
+//               alert("There was an error setting the language.");
+//           }
+
+//       })
+
+//    })
+
+//})
+
+
+
+//$(document).ready(function () {
+//    var staticTranslations = {}; // To store static translations from the server
+//    var productTranslations = []; // To store product translations from JSON files
+
+//    function translateContent() {
+//        console.log("Translating content...");
+//        // Translate static text
+//        $('[data-translate]').each(function () {
+//            var key = $(this).data('translate');
+//            console.log("Translating static text:", key, staticTranslations[key]);
+//            $(this).text(staticTranslations[key]);
+//        });
+//        $('[data-placeholder]').each(function () {
+//            var key = $(this).data('placeholder');
+//            console.log("Translating placeholder:", key, staticTranslations[key]);
+//            $(this).attr('placeholder', staticTranslations[key]);
+//        });
+
+//        // Translate product text
+//        $('[data-name]').each(function () {
+//            var key = $(this).data('name');
+//            var product = productTranslations.find(p => p.Name === key || p.Name === $(this).text());
+//            console.log("Translating product name:", key, product ? product.Name : "Not found");
+//            if (product) {
+//                $(this).text(product.Name);
+//            }
+//        });
+//        $('[data-description]').each(function () {
+//            var key = $(this).data('description');
+//            var product = productTranslations.find(p => p.Description === key || p.Description === $(this).text());
+//            console.log("Translating product description:", key, product ? product.Description : "Not found");
+//            if (product) {
+//                $(this).text(product.Description);
+//            }
+//        });
+//    }
+
+//    $('.Lang-btn').click(function (e) {
+//        e.preventDefault();
+//        var culture = $(this).data('culture');
+//        var translationsFile = culture === 'en' ? 'translations-en.json' : 'translations-ar.json';
+
+//        console.log("Language button clicked. Culture:", culture);
+
+//        // Load static translations from server
+//        $.ajax({
+//            type: 'GET',
+//            url: '/Language/SetLanguageAndTranslate',
+//            data: {
+//                culture: culture,
+//                keys: ["NewProduct", "Products", "ExploreCategories", "SearchPlaceholder", "Price", "Update", "Details", "Delete", "AddToCart"]
+//            },
+//            success: function (response) {
+//                if (response.success) {
+//                    console.log("Static translations loaded:", response.translations);
+//                    staticTranslations = response.translations;
+
+//                    // Load product translations from JSON file
+//                    $.getJSON(translationsFile, function (data) {
+//                        console.log("Product translations loaded:", data);
+//                        productTranslations = data;
+//                        translateContent();
+//                    });
+//                }
+//            },
+//            error: function () {
+//                alert("There was an error setting the language.");
+//            }
+//        });
+//    });
+//});
+//End Handle Language 
 
 
 

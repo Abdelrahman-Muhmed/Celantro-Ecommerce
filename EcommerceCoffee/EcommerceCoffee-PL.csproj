@@ -316,15 +316,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="App_GlobalResources\Arabic.ar-SA.Designer.cs">
+    <Compile Include="App_GlobalResources\Resources.ar-SA.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Arabic.ar-SA.resx</DependentUpon>
+      <DependentUpon>Resources.ar-SA.resx</DependentUpon>
     </Compile>
-    <Compile Include="App_GlobalResources\English.Designer.cs">
+    <Compile Include="App_GlobalResources\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>English.resx</DependentUpon>
+      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -2443,6 +2443,8 @@
     <Content Include="WebFonts\fontawesome-free-6.4.0-web\svgs\solid\yen-sign.svg" />
     <Content Include="WebFonts\fontawesome-free-6.4.0-web\svgs\solid\yin-yang.svg" />
     <Content Include="WebFonts\fontawesome-free-6.4.0-web\svgs\solid\z.svg" />
+    <Content Include="Scripts\ajax\translations-ar.json" />
+    <Content Include="Scripts\ajax\translations-en.json" />
     <None Include="Scripts\jquery-3.7.1.intellisense.js" />
     <Content Include="Scripts\ClientSideValdiation\GlobalValdiation.js" />
     <Content Include="Scripts\ajax\ajaxCall.js" />
@@ -2589,13 +2591,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="App_GlobalResources\Arabic.ar-SA.resx">
+    <EmbeddedResource Include="App_GlobalResources\Resources.ar-SA.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Arabic.ar-SA.Designer.cs</LastGenOutput>
+      <LastGenOutput>Resources.ar-SA.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="App_GlobalResources\English.resx">
+    <EmbeddedResource Include="App_GlobalResources\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>English.Designer.cs</LastGenOutput>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

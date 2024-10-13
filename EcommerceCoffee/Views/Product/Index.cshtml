@@ -1,66 +1,112 @@
-﻿@model IEnumerable<EcommerceCoffee_BLL.DTOs.ProductRetuenDto>
-
+﻿
+@model IEnumerable<EcommerceCoffee_BLL.DTOs.ProductRetuenDto>
+<!-- #region Old Index  -->
 @{
-    ViewBag.Title = "Products";
+    ViewBag.Title = HttpContext.GetGlobalResourceObject("Resources", "Products");
 }
-
-
 <!-- Custom CSS -->
 <link href="~/Content/Home/Products.css" rel="stylesheet" />
 <div class="products">
-    <!-- Page Header -->
-    <div class="content mb-4">
-        <a href="@Url.Action("Create", "Product")" class="btn button">New Product</a>
-        <h3 class="mt-3">Products</h3>
-        <p>Explore our various categories to find the products that best suit your needs.</p>
-    </div>
+ 
+<div class="content mb-4">
+    <a href="@Url.Action("Create", "Product")" class="btn button">
+        @HttpContext.GetGlobalResourceObject("Resources", "New Product")
+    </a>
+    <h3 class="mt-3">
+        @HttpContext.GetGlobalResourceObject("Resources", "Products")
+    </h3>
+    <p>
+        @HttpContext.GetGlobalResourceObject("Resources", "pargh")
+    </p>
+</div>
 
-
-
-    <!-- Carousel Section -->
-    <div class="carousel mt-5 mb-5">
-        <div class="carousel-track">
-            @foreach (var item in Model.Take(10))
-            {
-                <div class="carousel-slide">
-                    <img src="@item.PictureUrl" alt="" class="img-fluid carousel-image" />
-                    <div class="carousel-caption">
-
-                    </div>
+ @*Carousel Section*@ 
+<div class="carousel mt-5 mb-5">
+    <div class="carousel-track">
+        @foreach (var item in Model.Take(10))
+        {
+            <div class="carousel-slide">
+                <img src="@item.PictureUrl" alt="" class="img-fluid carousel-image" />
+                <div class="carousel-caption">
                 </div>
-            }
-        </div>
-        <button class="carousel-button left" id="prevBtn">&#10094;</button>
-        <button class="carousel-button right" id="nextBtn">&#10095;</button>
+            </div>
+        }
     </div>
-
-    <!-- Search Input -->
-    <div class="form-group mb-5">
-        <input type="text" id="searchBox" class="form-control" placeholder="Search for products..." />
-    </div>
-
-    <!-- Products Grid -->
-    <div id="product-container" class="row justify-content-center">
+    <button class="carousel-button left" id="prevBtn">&#10094;</button>
+    <button class="carousel-button right" id="nextBtn">&#10095;</button>
+</div>
+ @*Search Input*@ 
+<div class="form-group mb-5">
+    <input type="text" id="searchBox" class="form-control" placeholder="@HttpContext.GetGlobalResourceObject("Resources", "Search")" />
+</div>
+ @*Products Grid*@ 
+<div id="product-container" class="row justify-content-center">
         @foreach (var item in Model)
         {
             <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
                 <div class="card h-100" data-name="@item.Name">
                     <img src="@item.PictureUrl" alt="Image of @item.Name" class="card-img-top mx-auto d-block" loading="lazy" />
-
                     <div class="card-body d-flex flex-column">
                         <h5 class="card-title">@item.Name</h5>
                         <p class="card-text">@item.Description</p>
-                        <span class="text-muted">Price: @item.Price.ToString("C")</span>
+                        <span class="text-muted">
+                            @HttpContext.GetGlobalResourceObject("Resources", "Price:") @item.Price.ToString("C")
+                        </span>
                     </div>
-
                     <div class="card-footer d-flex justify-content-center flex-wrap">
-                        <a href="@Url.Action("Update", "Product", new { id = item.Id })" class="btn button m-1">Update</a>
-                        <a href="@Url.Action("Details", "Product", new { id = item.Id })" class="btn button m-1">Details</a>
-                        <a data-id="@item.Id" data-controller="Product" data-method="POST" class="btn button deleteBtn m-1">Delete</a>
-                        <a data-id="@item.Id" class="btn button addCartBtn m-1">Add To Cart</a>
+                        <a href="@Url.Action("Update", "Product", new { id = item.Id })" class="btn button m-1">
+                            @HttpContext.GetGlobalResourceObject("Resources", "Update")
+                        </a>
+                        <a href="@Url.Action("Details", "Product", new { id = item.Id })" class="btn button m-1">
+                            @HttpContext.GetGlobalResourceObject("Resources", "Details")
+                        </a>
+                        <a data-id="@item.Id" data-controller="Product" data-method="POST" class="btn button deleteBtn m-1">
+                            @HttpContext.GetGlobalResourceObject("Resources", "Delete")
+                        </a>
+                        <a data-id="@item.Id" class="btn button addCartBtn m-1">
+                            @HttpContext.GetGlobalResourceObject("Resources", "Add To Cart")
+                        </a>
                     </div>
                 </div>
             </div>
         }
     </div>
 </div>
+<!-- #endregion -->
+
+
+<!--<div class="products">
+    <div class="content mb-4">
+        <a href="@Url.Action("Create", "Product")" class="btn button" data-translate="NewProduct"></a>
+        <h3 class="mt-3" data-translate="Products">@HttpContext.GetGlobalResourceObject("Resources", "Products")</h3>
+        <p data-translate="ExploreCategories"></p>
+    </div>-->
+    <!-- Search Input -->
+    <!--<div class="form-group mb-5">
+        <input type="text" id="searchBox" class="form-control" data-placeholder="SearchPlaceholder" />
+    </div>
+    <div id="product-container" class="row justify-content-center">
+        @foreach (var item in Model)
+        {
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+                <div class="card h-100">
+                    <img src="@item.PictureUrl" alt="Image of @item.Name" class="card-img-top mx-auto d-block" loading="lazy" />
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title" data-name="@item.Name">@item.Name</h5>
+                        <p class="card-text" data-description="@item.Description">@item.Description</p>
+                        <span class="text-muted">
+                            <span data-translate="Price"></span> @item.Price.ToString("C")
+                        </span>
+                    </div>
+                    <div class="card-footer d-flex justify-content-center flex-wrap">
+                        <a href="@Url.Action("Update", "Product", new { id = item.Id })" class="btn button m-1" data-translate="Update"></a>
+                        <a href="@Url.Action("Details", "Product", new { id = item.Id })" class="btn button m-1" data-translate="Details"></a>
+                        <a data-id="@item.Id" data-controller="Product" data-method="POST" class="btn button deleteBtn m-1" data-translate="Delete"></a>
+                        <a data-id="@item.Id" class="btn button addCartBtn m-1" data-translate="AddToCart"></a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>-->
+

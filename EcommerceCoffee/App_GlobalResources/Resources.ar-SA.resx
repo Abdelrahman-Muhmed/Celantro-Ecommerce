@@ -117,7 +117,137 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Contact" xml:space="preserve">
-    <value>Contact </value>
+  <data name="Add To Cart" xml:space="preserve">
+    <value>أضف إلى السلة</value>
+  </data>
+  <data name="BackToHome" xml:space="preserve">
+    <value>العودة إلى الرئيسية</value>
+  </data>
+  <data name="Brand" xml:space="preserve">
+    <value>العلامة التجارية</value>
+  </data>
+  <data name="BrandName" xml:space="preserve">
+    <value>سلانترو</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+  <data name="Cart_Tooltip" xml:space="preserve">
+    <value>عرض السلة</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>الفئة</value>
+  </data>
+  <data name="CreateButton" xml:space="preserve">
+    <value>إنشاء</value>
+  </data>
+  <data name="CreateProduct" xml:space="preserve">
+    <value>إنشاء منتج</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>الوصف</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>التفاصيل</value>
+  </data>
+  <data name="Footer_AboutText" xml:space="preserve">
+    <value>منذ عام 1987، كان مؤسستنا ترشد الطلاب والأشخاص حول العالم. نحن نقدم مرافق مذهلة ونساعد الآخرين في كل مجتمع ومنطقة.</value>
+  </data>
+  <data name="Footer_AboutUs" xml:space="preserve">
+    <value>من نحن</value>
+  </data>
+  <data name="Footer_BusinessFooter_BusinessHours" xml:space="preserve">
+    <value>ساعات العمل</value>
+  </data>
+  <data name="Footer_ContactUs" xml:space="preserve">
+    <value>اتصل بنا</value>
+  </data>
+  <data name="Footer_Copyright" xml:space="preserve">
+    <value>© حقوق النشر 2024 بواسطة فريق المطورين</value>
+  </data>
+  <data name="Footer_HoursMonFri" xml:space="preserve">
+    <value>الاثنين-الجمعة: من 9 صباحًا إلى 5 مساءً</value>
+  </data>
+  <data name="Footer_HoursSat" xml:space="preserve">
+    <value>السبت: من 10 صباحًا إلى 2 مساءً</value>
+  </data>
+  <data name="Footer_HoursSun" xml:space="preserve">
+    <value>الأحد: مغلق</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="Navbar_Arabic" xml:space="preserve">
+    <value>العربية</value>
+  </data>
+  <data name="Navbar_Category" xml:space="preserve">
+    <value>الفئة</value>
+  </data>
+  <data name="Navbar_English" xml:space="preserve">
+    <value>الإنجليزية</value>
+  </data>
+  <data name="Navbar_Home" xml:space="preserve">
+    <value>الرئيسية</value>
+  </data>
+  <data name="Navbar_JoinUs" xml:space="preserve">
+    <value>انضم إلينا</value>
+  </data>
+  <data name="Navbar_Login" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="Navbar_Logout" xml:space="preserve">
+    <value>تسجيل الخروج</value>
+  </data>
+  <data name="Navbar_Users" xml:space="preserve">
+    <value>المستخدمون</value>
+  </data>
+  <data name="Navbar_Welcome" xml:space="preserve">
+    <value>أهلاً وسهلاً، {0}!</value>
+  </data>
+  <data name="New Product" xml:space="preserve">
+    <value>منتج جديد</value>
+  </data>
+  <data name="pargh" xml:space="preserve">
+    <value> استكشف الفئات المختلفة لدينا للعثور على المنتجات التي تناسب احتياجاتك.
+ </value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>السعر</value>
+  </data>
+  <data name="ProductImage" xml:space="preserve">
+    <value>صورة المنتج</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>جميع المنتجات</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>ابحث عن المنتجات...</value>
+  </data>
+  <data name="SelectBrand" xml:space="preserve">
+    <value>-- اختر العلامة التجارية --</value>
+  </data>
+  <data name="SelectCategory" xml:space="preserve">
+    <value>-- اختر الفئة --</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>إرسال</value>
+  </data>
+  <data name="ToggleNavigation" xml:space="preserve">
+    <value>تبديل اللغه</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>تعديل</value>
+  </data>
+  <data name="UpdateButton" xml:space="preserve">
+    <value>تحديث المنتج</value>
+  </data>
+  <data name="UploadImage" xml:space="preserve">
+    <value>تحميل الصورة</value>
+  </data>
+  <data name="ValidationRequired" xml:space="preserve">
+    <value>هذا الحقل مطلوب</value>
   </data>
 </root>

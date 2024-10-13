@@ -4,18 +4,97 @@
     ViewBag.Title = "Create Product";
 }
 
+<!-- #region Old -->
+@*<div class="container">
+
+        @using (Html.BeginForm("Create", "Product", FormMethod.Post, new { @class = "mt-5 form-horizontal" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-horizontal">
+                <h4>Create Product</h4>
+                <hr />
+
+
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+                    <div class="col-md-10">
+                        @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = 5 })
+                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(model => model.Price, new { @class = "form-control", type = "number", min = 0, step = "0.01" })
+                        @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.BrandId, "Brand", htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("BrandId", null, "-- Select Brand --", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.BrandId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.CategoryId, "Category", htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+                    <div class="col-md-10">
+                        @Html.DropDownList("CategoryId", null, "-- Select Category --", new { @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.CategoryId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.ImageFile, "Product Image", htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+                    <div class="col-md-10">
+                        <input type="file" name="ImageFile" accept="image/*" class="form-control-file" />
+                        @Html.ValidationMessageFor(model => model.ImageFile, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+                <div class="form-group row">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="button" />
+                    </div>
+                </div>
+            </div>
+        }
+
+        @Html.ActionLink("Back to Home", "Index", null, new { @class = "btn btn-secondary mx-2" })
+
+    </div>*@
+
+<!-- #endregion -->
+
+
 <div class="container">
-    @*new { enctype = "multipart/form-data", @class = "form-horizontal" }*@
-    @using (Html.BeginForm("Create", "Product", FormMethod.Post, new { @class = "mt-5 form-horizontal" }))
+    @using (Html.BeginForm("Create", "Product", FormMethod.Post, new { @class = "mt-5 form-horizontal", enctype = "multipart/form-data" }))
     {
         @Html.AntiForgeryToken()
         <div class="form-horizontal">
-            <h4>Create Product</h4>
+            <h4>@HttpContext.GetGlobalResourceObject("Resources", "CreateProduct")</h4>
             <hr />
 
             @* Name *@
             <div class="form-group row">
-                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+                @Html.LabelFor(model => model.Name, (string)HttpContext.GetGlobalResourceObject("Resources", "Name"), htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
                 <div class="col-md-10">
                     @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
@@ -24,7 +103,7 @@
 
             @* Description *@
             <div class="form-group row">
-                @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+                @Html.LabelFor(model => model.Description, (string)HttpContext.GetGlobalResourceObject("Resources", "Description"), htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
                 <div class="col-md-10">
                     @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = 5 })
                     @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
@@ -33,7 +112,7 @@
 
             @* Price *@
             <div class="form-group row">
-                @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+                @Html.LabelFor(model => model.Price, (string)HttpContext.GetGlobalResourceObject("Resources", "Price"), htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
                 <div class="col-md-10">
                     @Html.TextBoxFor(model => model.Price, new { @class = "form-control", type = "number", min = 0, step = "0.01" })
                     @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
@@ -42,25 +121,25 @@
 
             @* Brand *@
             <div class="form-group row">
-                @Html.LabelFor(model => model.BrandId, "Brand", htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+                @Html.LabelFor(model => model.BrandId, (string)HttpContext.GetGlobalResourceObject("Resources", "Brand"), htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
                 <div class="col-md-10">
-                    @Html.DropDownList("BrandId", null, "-- Select Brand --", new { @class = "form-control" })
+                    @Html.DropDownList("BrandId", null, (string)HttpContext.GetGlobalResourceObject("Resources", "SelectBrand"), new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.BrandId, "", new { @class = "text-danger" })
                 </div>
             </div>
 
             @* Category *@
             <div class="form-group row">
-                @Html.LabelFor(model => model.CategoryId, "Category", htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+                @Html.LabelFor(model => model.CategoryId, (string)HttpContext.GetGlobalResourceObject("Resources", "Category"), htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
                 <div class="col-md-10">
-                    @Html.DropDownList("CategoryId", null, "-- Select Category --", new { @class = "form-control" })
+                    @Html.DropDownList("CategoryId", null, (string)HttpContext.GetGlobalResourceObject("Resources", "SelectCategory"), new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.CategoryId, "", new { @class = "text-danger" })
                 </div>
             </div>
 
             @* Image Upload *@
             <div class="form-group row">
-                @Html.LabelFor(model => model.ImageFile, "Product Image", htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+                @Html.LabelFor(model => model.ImageFile, (string)HttpContext.GetGlobalResourceObject("Resources", "ProductImage"), htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
                 <div class="col-md-10">
                     <input type="file" name="ImageFile" accept="image/*" class="form-control-file" />
                     @Html.ValidationMessageFor(model => model.ImageFile, "", new { @class = "text-danger" })
@@ -70,12 +149,11 @@
             @* Submit Button *@
             <div class="form-group row">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="button" />
+                    <input type="submit" value="@HttpContext.GetGlobalResourceObject("Resources", "CreateButton")" class="button" />
                 </div>
             </div>
         </div>
     }
 
-    @Html.ActionLink("Back to Home", "Index", null, new { @class = "btn btn-secondary mx-2" })
-
+    @Html.ActionLink((string)HttpContext.GetGlobalResourceObject("Resources", "BackToHome"), "Index", null, new { @class = "btn btn-secondary mx-2" })
 </div>

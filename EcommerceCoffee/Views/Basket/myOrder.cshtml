@@ -47,3 +47,5 @@
 </table>
 
 <button id="createOrder" class="btn btn-primary">Create Order</button>
+
+@Html.ActionLink((string)HttpContext.GetGlobalResourceObject("Resources", "BackToHome"), "Index", null, new { @class = "btn btn-secondary mx-2" })

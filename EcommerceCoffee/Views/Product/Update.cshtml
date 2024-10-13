@@ -4,18 +4,19 @@
     ViewBag.Title = "Update Product";
 }
 
+
 <div class="container">
-    @*new { enctype = "multipart/form-data", @class = "form-horizontal" }*@
-    @using (Html.BeginForm("Create", "Product", FormMethod.Post, new { @class = "mt-5 form-horizontal" }))
+    @* Update Product Form *@
+    @using (Html.BeginForm("Update", "Product", FormMethod.Post, new { @class = "mt-5 form-horizontal", enctype = "multipart/form-data" }))
     {
         @Html.AntiForgeryToken()
         <div class="form-horizontal">
-            <h4>Update Product</h4>
+            <h4>@Resources.Resources.UpdateProduct</h4>
             <hr />
 
             @* Name *@
             <div class="form-group row">
-                @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+                @Html.LabelFor(model => model.Name, Resources.Resources.Name, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
                 <div class="col-md-10">
                     @Html.TextBoxFor(model => model.Name, new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
@@ -24,7 +25,7 @@
 
             @* Description *@
             <div class="form-group row">
-                @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+                @Html.LabelFor(model => model.Description, Resources.Resources.Description, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
                 <div class="col-md-10">
                     @Html.TextAreaFor(model => model.Description, new { @class = "form-control", rows = 5 })
                     @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
@@ -33,7 +34,7 @@
 
             @* Price *@
             <div class="form-group row">
-                @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+                @Html.LabelFor(model => model.Price, Resources.Resources.Price, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
                 <div class="col-md-10">
                     @Html.TextBoxFor(model => model.Price, new { @class = "form-control", type = "number", min = 0, step = "0.01" })
                     @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
@@ -42,34 +43,27 @@
 
             @* Brand *@
             <div class="form-group row">
-                @Html.LabelFor(model => model.BrandId, "Brand", htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+                @Html.LabelFor(model => model.BrandId, Resources.Resources.Brand, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
                 <div class="col-md-10">
-                    @Html.DropDownList("BrandId", null, "-- Select Brand --", new { @class = "form-control" })
+                    @Html.DropDownList("BrandId", null, Resources.Resources.SelectBrand, new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.BrandId, "", new { @class = "text-danger" })
                 </div>
             </div>
 
             @* Category *@
             <div class="form-group row">
-                @Html.LabelFor(model => model.CategoryId, "Category", htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+                @Html.LabelFor(model => model.CategoryId, Resources.Resources.Category, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
                 <div class="col-md-10">
-                    @Html.DropDownList("CategoryId", null, "-- Select Category --", new { @class = "form-control" })
+                    @Html.DropDownList("CategoryId", null, Resources.Resources.SelectCategory, new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.CategoryId, "", new { @class = "text-danger" })
                 </div>
             </div>
 
             @* Image Upload *@
             <div class="form-group row">
-                @Html.LabelFor(model => model.ImageFile, "Product Image", htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
+                @Html.LabelFor(model => model.ImageFile, Resources.Resources.ProductImage, htmlAttributes: new { @class = "control-label col-md-2 col-form-label" })
                 <div class="col-md-10">
-                    @*@if (!string.IsNullOrEmpty(Model.ImageFile.FileName))
-                        {
-                            <img src="@Url.Content(Model.ImageFile.FileName)" alt="Product Image" class="card-img-top" />
-                        }
-                        else
-                        {
-                            <p>No image available.</p>
-                        }*@
+                 
                     <input type="file" name="ImageFile" accept="image/*" class="form-control-file" />
                     @Html.ValidationMessageFor(model => model.ImageFile, "", new { @class = "text-danger" })
                 </div>
@@ -78,12 +72,11 @@
             @* Submit Button *@
             <div class="form-group row">
                 <div class="col-md-offset-2 col-md-10">
-                    <input type="submit" value="Create" class="button" />
+                    <input type="submit" value="@Resources.Resources.UpdateButton" class="button" />
                 </div>
             </div>
         </div>
     }
 
-    @Html.ActionLink("Back to Home", "Index", null, new { @class = "btn btn-secondary mx-2" })
-
+    @Html.ActionLink(Resources.Resources.BackToHome, "Index", null, new { @class = "btn btn-secondary mx-2" })
 </div>

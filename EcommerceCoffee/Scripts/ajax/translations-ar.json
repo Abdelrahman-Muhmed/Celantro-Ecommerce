@@ -1,0 +1,146 @@
+[
+  {
+    "Name": "دبل كراميل فرابتشينو",
+    "Description": "كراميل مزدوج فرابتشينو",
+    "Price": 200,
+    "PictureUrl": "images/double-caramel-frappuccino.png",
+    "CategoryId": 1,
+    "BrandId": 1
+  },
+  {
+    "Name": "وايت شوكليت موكا فرابتشينو",
+    "Description": "فرابتشينو وايت شوكليت موكا",
+    "Price": 150,
+    "PictureUrl": "images/white-chocolate-mocha-frappuccino.png",
+    "CategoryId": 1,
+    "BrandId": 1
+  },
+  {
+    "Name": "آيسد كافيه لاتيه",
+    "Description": "كافيه لاتيه مبرد",
+    "Price": 180,
+    "PictureUrl": "images/iced-cafe-latte.png",
+    "CategoryId": 2,
+    "BrandId": 1
+  },
+  {
+    "Name": "وايت شوكليت موكا",
+    "Description": "موكا الشوكولاتة البيضاء",
+    "Price": 300,
+    "PictureUrl": "images/white-chocolate-mocha.png",
+    "CategoryId": 3,
+    "BrandId": 2
+  },
+  {
+    "Name": "آيسد كراميل ماكياتو",
+    "Description": "كراميل ماكياتو مبرد",
+    "Price": 250,
+    "PictureUrl": "images/iced-caramel-macchiato.png",
+    "CategoryId": 4,
+    "BrandId": 1
+  },
+  {
+    "Name": "هوت كراميل ماكياتو",
+    "Description": "كراميل ماكياتو ساخن",
+    "Price": 120,
+    "PictureUrl": "images/hot-caramel-macchiato.png",
+    "CategoryId": 4,
+    "BrandId": 5
+  },
+  {
+    "Name": "آيسد ماتشا لاتيه",
+    "Description": "ماتشا لاتيه مبرد",
+    "Price": 10,
+    "PictureUrl": "images/iced-matcha-latte.png",
+    "CategoryId": 5,
+    "BrandId": 2
+  },
+  {
+    "Name": "كعكة العسل",
+    "Description": "كعكة العسل",
+    "Price": 8,
+    "PictureUrl": "images/honey-cake.png",
+    "CategoryId": 6,
+    "BrandId": 1
+  },
+  {
+    "Name": "تشيز كيك بالتوت الأزرق",
+    "Description": "كيك الجبن بالتوت الأزرق",
+    "Price": 15,
+    "PictureUrl": "images/blueberry-cheesecake.png",
+    "CategoryId": 6,
+    "BrandId": 1
+  },
+  {
+    "Name": "دونات مزججة",
+    "Description": "دونات مغلفة",
+    "Price": 18,
+    "PictureUrl": "images/glazed-donuts.png",
+    "CategoryId": 7,
+    "BrandId": 3
+  },
+  {
+    "Name": "سلطة يونانية",
+    "Description": "سلطة يونانية",
+    "Price": 15,
+    "PictureUrl": "images/greek-salad.png",
+    "CategoryId": 7,
+    "BrandId": 1
+  },
+  {
+    "Name": "آيسد شاي أسود مع ليمون",
+    "Description": "ليمونادا الشاي الأسود المبردة",
+    "Price": 16,
+    "PictureUrl": "images/iced-black-tea-lemonade.png",
+    "CategoryId": 4,
+    "BrandId": 4
+  },
+  {
+    "Name": "آيسد شاي لاتيه لندن فوغ",
+    "Description": "شاي لاتيه لندن فوغ المثلج",
+    "Price": 14,
+    "PictureUrl": "images/iced-london-fog-tea-latte.png",
+    "CategoryId": 4,
+    "BrandId": 4
+  },
+  {
+    "Name": "سندويتش تركي بيكون مع جبنة شيدر وبياض البيض",
+    "Description": "ساندويتش البيكون المدخن المزدوج مع جبنة الشيدر وبياض البيض",
+    "Price": 250,
+    "PictureUrl": "images/turkey-bacon-cheddar-and-egg-white-sandwich.png",
+    "CategoryId": 3,
+    "BrandId": 6
+  },
+  {
+    "Name": "آيسد ماتشا",
+    "Description": "ماتشا مثلج",
+    "Price": 189.99,
+    "PictureUrl": "images/iced-matcha.png",
+    "CategoryId": 3,
+    "BrandId": 2
+  },
+  {
+    "Name": "ساندويتش بيكون مدخن مزدوج مع جبنة شيدر وبيضة",
+    "Description": "ساندويتش البيكون المدخن المزدوج مع جبنة الشيدر والبيض",
+    "Price": 199.99,
+    "PictureUrl": "images/double-smoked-bacon-cheddar-and-egg-sandwich.png",
+    "CategoryId": 3,
+    "BrandId": 2
+  },
+  {
+    "Name": "آيسد شاي تشاي لاتيه مع رغوة ذهبية",
+    "Description": "شاي تشاي لاتيه المثلج مع رغوة الذهب",
+    "Price": 150,
+    "PictureUrl": "images/iced-chai-tea-latte-with-oleato-golden-foam.png",
+    "CategoryId": 3,
+    "BrandId": 1
+  },
+  {
+    "Name": "مشروب دراجون ستابكس المنعش مع رغوة ذهبية",
+    "Description": "مشروب دراجون ستاربكس المنعش مع رغوة الذهب",
+    "Price": 180,
+    "PictureUrl": "images/dragon-drink-starbucks-refreshers-beverage-with-oleato-golden-foam.png",
+    "CategoryId": 3,
+    "BrandId": 1
+  }
+]

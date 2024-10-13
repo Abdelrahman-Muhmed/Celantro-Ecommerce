@@ -117,7 +117,142 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Contact" xml:space="preserve">
-    <value>تواصل معانا </value>
+  <data name="Add To Cart" xml:space="preserve">
+    <value>Add To Cart</value>
+  </data>
+  <data name="BackToHome" xml:space="preserve">
+    <value>Back To Home</value>
+  </data>
+  <data name="Brand" xml:space="preserve">
+    <value>Brand</value>
+  </data>
+  <data name="BrandName" xml:space="preserve">
+    <value>Celantro</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Cart_Tooltip" xml:space="preserve">
+    <value>View Cart</value>
+  </data>
+  <data name="Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="CreateButton" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="CreateProduct" xml:space="preserve">
+    <value>Create Product</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Footer_AboutText" xml:space="preserve">
+    <value>Since 1987, our institution has been guiding students and people around the world. We provide astonishing facilities and help others in every community and region.</value>
+  </data>
+  <data name="Footer_AboutUs" xml:space="preserve">
+    <value>ABOUT US</value>
+  </data>
+  <data name="Footer_BusinessHours" xml:space="preserve">
+    <value>BUSINESS HOURS</value>
+  </data>
+  <data name="Footer_ContactUs" xml:space="preserve">
+    <value>CONTACT US</value>
+  </data>
+  <data name="Footer_Copyright" xml:space="preserve">
+    <value>© Copyright 2024 By Developer Team</value>
+  </data>
+  <data name="Footer_HoursMonFri" xml:space="preserve">
+    <value>Monday-Friday: 9am to 5pm</value>
+  </data>
+  <data name="Footer_HoursSat" xml:space="preserve">
+    <value>Saturday: 10am to 2pm</value>
+  </data>
+  <data name="Footer_HoursSun" xml:space="preserve">
+    <value>Sunday: Closed</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Navbar_Arabic" xml:space="preserve">
+    <value>Arabic</value>
+  </data>
+  <data name="Navbar_Category" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="Navbar_English" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Navbar_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Navbar_JoinUs" xml:space="preserve">
+    <value>Join Us</value>
+  </data>
+  <data name="Navbar_Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Navbar_Logout" xml:space="preserve">
+    <value>Logout</value>
+  </data>
+  <data name="Navbar_Users" xml:space="preserve">
+    <value>Users</value>
+  </data>
+  <data name="Navbar_Welcome" xml:space="preserve">
+    <value>Welcome, {0}!</value>
+  </data>
+  <data name="New Product" xml:space="preserve">
+    <value>New Product</value>
+  </data>
+  <data name="pargh" xml:space="preserve">
+    <value>Explore our various categories to find the products that best suit your needs.</value>
+  </data>
+  <data name="Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Price:" xml:space="preserve">
+    <value>Price:</value>
+  </data>
+  <data name="ProductImage" xml:space="preserve">
+    <value>Product Image</value>
+  </data>
+  <data name="Products" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search for products...</value>
+  </data>
+  <data name="SelectBrand" xml:space="preserve">
+    <value>Select Brand</value>
+  </data>
+  <data name="SelectCategory" xml:space="preserve">
+    <value>Select Category</value>
+  </data>
+  <data name="Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="ToggleNavigation" xml:space="preserve">
+    <value>Toggle navigation</value>
+  </data>
+  <data name="Update" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="UpdateButton" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="UpdateProduct" xml:space="preserve">
+    <value>Update Product</value>
+  </data>
+  <data name="UploadImage" xml:space="preserve">
+    <value>Upload Image</value>
+  </data>
+  <data name="ValidationRequired" xml:space="preserve">
+    <value>This field is required.</value>
   </data>
 </root>
