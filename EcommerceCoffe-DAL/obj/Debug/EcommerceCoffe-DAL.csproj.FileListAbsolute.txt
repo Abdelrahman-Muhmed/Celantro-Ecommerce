@@ -286,3 +286,8 @@ E:\EcommerceCoffee\EcommerceCoffe-DAL\obj\Debug\EcommerceCoffe-DAL.csproj.CoreCo
 E:\EcommerceCoffee\EcommerceCoffe-DAL\obj\Debug\Ecommerc.43EADA07.Up2Date
 E:\EcommerceCoffee\EcommerceCoffe-DAL\obj\Debug\EcommerceCoffe-DAL.dll
 E:\EcommerceCoffee\EcommerceCoffe-DAL\obj\Debug\EcommerceCoffe-DAL.pdb
+C:\Users\Bodi\OneDrive\Desktop\Celantro-Ecommerce\EcommerceCoffe-DAL\obj\Debug\EcommerceCoffe-DAL.csproj.AssemblyReference.cache
+C:\Users\Bodi\OneDrive\Desktop\Celantro-Ecommerce\EcommerceCoffe-DAL\obj\Debug\EcommerceCoffe_DAL.Migrations.CreateDatabase.resources
+C:\Users\Bodi\OneDrive\Desktop\Celantro-Ecommerce\EcommerceCoffe-DAL\obj\Debug\EcommerceCoffe_DAL.Migrations.CreateDatabaseIdentity.resources
+C:\Users\Bodi\OneDrive\Desktop\Celantro-Ecommerce\EcommerceCoffe-DAL\obj\Debug\EcommerceCoffe-DAL.csproj.GenerateResource.cache
+C:\Users\Bodi\OneDrive\Desktop\Celantro-Ecommerce\EcommerceCoffe-DAL\obj\Debug\EcommerceCoffe-DAL.csproj.CoreCompileInputs.cache
